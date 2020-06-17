@@ -1,0 +1,40 @@
+.navrem {
+  padding: 1.0rem 1rem;
+  font-weight: 700;
+  font-size: 30px;
+}  
+.navbg{
+  background-color: black;
+  }
+  #wrapper {
+    padding-left: 0;
+    transition: all 0.5s ease;
+    position: relative;
+  }
+  .bg-white1{
+background-color: aqua;
+  }
+  .card-header{
+    background-color: #c60808;
+    font-weight: 600;
+    color: white;
+    font-size: 20px;
+  }
+  .li1{
+    /* background-color: blueviolet; */
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+  }
+  .li2{
+    /* background-color: yellow; */
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+  }
+  .li3{
+    /* background-color: greenyellow; */
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+  }

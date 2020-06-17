@@ -1,0 +1,250 @@
+<div class="div mb-5 navbg">
+  <nav class="navbar navbar-inverse navrem">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="sidebar-brand"><img src="assets/logo/logo_50x50.png"> <span style="color: white;"> Think
+            Ahead</span></div>
+      </div>
+      <button type="button" class="btn btn-danger" (click)="logout()">logout</button>
+    </div>
+    <div class="nav">
+      <ul class="nav navbar-nav">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" role="button" aria-haspopup="true">
+            <p class="arrow down"></p>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+</div>
+<div id="wrapper">
+
+  <section id="content-wrapper">
+    <div class="row ">
+      <div class="col-lg-12">
+        <main class="page-content ">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col s8 offset-s2">
+                <h2 class="header">Completed!</h2>
+                <div class="card horizontal">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <!-- <section id="form-signin" class=" p-3 map-back d-flex align-items-center justify-content-center " >
+                        <div class="form-signin-wrap shadow-lg bg-white corner-border p-2"style="width: 100%;">
+
+                          <h2 class="text-center p-1" style="width: 100%;">Score Card</h2>
+                          
+                            <h3 class="text-center p-2" style="background-color: #c60808;width: 100%;">Total Question
+                            </h3>
+                            <h2 class="text-center p-2">10</h2>
+                            <h3 class="text-center p-2" style="background-color: #c60808;width: 100%;">Correct Answer </h3>
+                            <h2 class="text-center p-2">9</h2>
+
+                            <h3 class=" p-2" class="text-center p-2" style="background-color: #c60808;width: 100%;">Wrong
+                              Answer </h3>
+                            <h2 class="text-center">1</h2>
+
+                          
+                        </div>
+                      </section> -->
+                      <div class="card mt-5 ml-5 mb-4" style="width: 100%;">
+                        <div class="card-header" >
+                          Score Card
+                        </div>
+                        <ul class="list-group list-group-flush" *ngFor="let u of this.result">
+                          <li class="list-group-item li1">Total Question :- {{u.total_question}}</li>
+                          <li class="list-group-item li2">Correct Answer :-{{u.correct_answer}}</li>
+                          <li class="list-group-item li3">Wrong Answer :- {{u.wrong_answer}}  </li>
+                          <li class="list-group-item li3">UnSelected Question :- {{u.unsubmit_answer}}  </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-3">
+                      <div class="card-image mt-3 mb-3">
+                        <img src="/assets/images/trophyimage.jpg" style="width: 250px;height : 250px;">
+                      </div>
+                    </div>
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-4 mt-5"  *ngFor="let u of this.result">
+                      <div class="card-stacked">
+                        <div class="card-content">
+                          <!-- <h4>Name: Ayush Saxena</h4> -->
+                          <h4>Email: {{emailId}}</h4>
+                          <h4>Phone: {{phoneNo}}</h4>
+                        </div>
+                        <br>
+
+                      </div>
+                      <h3>Your Total Score: {{u.correct_answer}}/ {{u.total_question}}</h3>
+
+                      <button class="btn btn-danger mt-3 ml-5" (click)="sendMail()"> Send Report To Mail 
+                      </button>
+                      <div class="row  mt-3 ml-4" >
+                        
+                        
+                        <!--   <button class="btn btn-primary mt-3 ml-3" > Send Report To LinkedIn 
+                          </button>
+                        <img src="/assets/icons/Sign-In-Small---Hover.png" (click)="linkedin()" style="width: 165px;height: 33px;"> -->
+                        
+
+                      </div>
+                    </div>
+
+                  </div>
+
+
+
+                </div>
+
+                <!-- Qn with correct answer -->
+                <!-- <div class="row mt-5">
+            <div class="col-md-4">
+                <button class="btn btn-success" (click)="Results()">View Previous Results</button>    </div>
+        
+        </div>
+        <div class="row mt-4" style="overflow-x: auto;">
+            <table class="table table-bordered" *ngIf= "status == 1">
+                <thead>
+                  <tr>
+                    <th scope="col"style="text-align: center;">Number</th>
+                    <th scope="col"style="text-align: center;">Date</th>
+                    <th scope="col"style="text-align: center;">Name</th>
+                    <th scope="col"style="text-align: center;">Email</th>
+                    <th scope="col"style="text-align: center;">PhoneNo</th>
+                    <th scope="col"style="text-align: center;">Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" style="text-align: center;">1</th>
+                    <td style="text-align: center;">22/03/2020</td>
+                    <td style="text-align: center;">Ayush</td>
+                    <td style="text-align: center;">saxena.ayush#51@gmail.com</td>
+                    <td style="text-align: center;">1234567890</td>
+                    <td style="text-align: center;">9/10</td>
+        
+        
+                  </tr>
+                  <tr>
+                    <th scope="row" style="text-align: center;">2</th>
+                    <td style="text-align: center;">22/03/2020</td>
+                    <td style="text-align: center;">Ayush</td>
+                    <td style="text-align: center;">saxena.ayush#51@gmail.com</td>
+                    <td style="text-align: center;">1234567890</td>
+                    <td style="text-align: center;">9/10</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" style="text-align: center;">3</th>
+                    <td style="text-align: center;">22/03/2020</td>
+                    <td style="text-align: center;">Ayush</td>
+                    <td style="text-align: center;">saxena.ayush#51@gmail.com</td>
+                    <td style="text-align: center;">1234567890</td>
+                    <td style="text-align: center;">9/10</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div> -->
+              </div>
+            </div>
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">How To Play?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h6> 1. If you don't have your account make your account First.</h6>
+        <h6> 2. If already having account sign in with credentials</h6>
+        <h6> 3. Select The Quiz according to choice</h6>
+        <h6> 4. After the finishing test you can view your scores</h6>
+
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="contactUs">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">How To Play?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="col-md-12">
+          <label form="sign-email">FirstName</label>
+
+          <div class="form-label-group">
+            <input type="text" id="sign-email" name="sign-email" class="form-control" placeholder="FirstName">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label form="sign-password">LastName</label>
+
+          <div class="form-label-group">
+            <input type="text" id="sign-password" name="sign-password" class="form-control" placeholder="LastName">
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <label form="sign-email">Subject</label>
+
+          <div class="form-label-group">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="width: 100%;"></textarea>
+
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-md-1">
+            <button type="button" class="btn btn-success">Save</button>
+
+          </div>
+        </div>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>

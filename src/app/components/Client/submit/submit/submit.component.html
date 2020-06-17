@@ -1,0 +1,56 @@
+<div class="div mb-5 navbg">
+  <nav class="navbar navbar-inverse navrem">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="sidebar-brand"><img src="assets/logo/logo_50x50.png"> <span style="color: white;"> Think
+            Ahead</span></div>
+      </div>
+      <button type="button"  class="btn btn-danger" (click)="logout()">logout</button>
+    </div>
+    <div class="nav">
+      <ul class="nav navbar-nav">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" role="button" aria-haspopup="true">
+            <p class="arrow down"></p>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+</div>
+
+<section id="form-signin" class="map-back d-flex align-items-center justify-content-center " style="margin-top: 10%;">
+    <form class="form-signin-wrap  shadow-lg bg-white corner-border p-4">
+      <h2 class="font-weight-normal text-center"> Thanks!!</h2>
+      <p class="text-center" style="font-weight: 600;">You will get the detailed report over below mail.<br> If you want to change your mail ,edit an email and submit, Thanks.</p>
+      
+     <form >
+         <div class="row">
+             <div class="col-md-1">
+             </div>
+             <div class="col-md-11">
+              <div class="textbox">
+                <i class="fa fa-envelope"></i>
+                <input type="email" placeholder="Email@example.com"  id="email"  [ngModelOptions]="{standalone: true}" [(ngModel)]="mailModel.email">
+              </div>
+             </div>
+   
+           
+          
+         </div>
+     
+     
+     
+     
+      <input type="submit" class="btn1 btn" value="Submit"  style="margin-left: 28%;" (click)="login()">
+
+    
+     </form>
+   
+
+    </form>
+    
+  </section>

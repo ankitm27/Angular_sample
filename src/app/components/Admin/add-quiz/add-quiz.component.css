@@ -1,0 +1,42 @@
+
+  
+  .styles{
+    top: 8px;
+    position: absolute;
+    left: 20%;
+  }
+  body {
+    padding-bottom: 30px;
+    position: relative;
+    min-height: 100%;
+  }
+  .board {
+    width: 33px;
+height: 4px;
+border-radius: 6px;
+background-color: #c60808;
+}
+  @media (min-width: 992px) {
+
+
+    #content-wrapper {
+      position: relative;
+      /* top: 55px; */
+    }
+  } .btn-design{
+    width: 40%;
+    background: red;
+    
+     color: white;
+    padding: 5px;
+    /* color: white; */
+    font-size: 18px;
+    cursor: pointer;
+    margin:10px 0 0 111px;
+  }
+  .btn-design2{
+    background-color: grey;
+    color: #fff;
+    border-color: #fff;
+  
+  }

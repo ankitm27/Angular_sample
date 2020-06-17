@@ -1,0 +1,128 @@
+<div class="bg">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="bs-example">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top ">
+          <a href="#" class="navbar-brand">
+            <img class="image" src="../../../assets/images/ACCAlogo.svg">
+          </a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+
+            </div>
+            <div class="navbar-nav ml-auto">
+              <!-- <a  class="nav-item nav-style " tabindex="-1" [routerLink]="[ '/home' ]">Home</a> -->
+              <!-- <a class="nav-item  nav-style" tabindex="-1">Play Quiz</a> -->
+              <!-- <a  class="nav-item nav-style"tabindex="-1" data-toggle="modal" data-target="#myModal">Quiz Instruction</a>
+                    <a class="nav-item nav-style " tabindex="-1" data-toggle="modal" data-target="#contactUs">Contact Us</a> -->
+              <a class="nav-item nav-style" (click)="PageLogin()">Login As Admin</a>
+
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+
+
+    <div class="row mt-5">
+      <div class="col-md-6 signup">
+        <section id="form-signin" class="map-back d-flex align-items-center justify-content-center ">
+          <form class="form-signin-wrap   corner-border p-4">
+            <h1 class="font-weight-normal text-center">Instructions</h1>
+
+            <div class="row">
+              <h5 class="tags ml-4"> This is a Accounts / CA fundamentals quiz. Basic accounts and fundamentals will
+                also qualify.
+
+              </h5>
+            </div>
+            <ul>
+              <li class="mt-3"> This is a timed test. Be prepared to commit and finish once you begin.
+              </li>
+              <li class="mt-3"> Time spent is taken into consideration.</li>
+              <li class="mt-3"> If you switch off the browser, test will be canceled.
+              </li>
+              <li class="mt-3">
+                Please don’t user any other tab it will consider as cheating and you will be disqualified.
+              </li>
+            </ul>
+
+          </form>
+        </section>
+      </div>
+      <div class="col-md-6  login ">
+        <section id="form-signin" class="map-back d-flex align-items-center justify-content-center ">
+          <form class="form-signin-wrap  shadow-lg bg-white corner-border p-4">
+            <h2 class="font-weight-normal text-center"> User Login</h2>
+            <p class="text-center">By continuing, you agree to ACCA's <a href="javascript:void(0)">terms of use</a>, <a
+                href="javascript:void(0)">community guidelines</a> & <a href="javascript:void(0)">privacy policy.</a>
+            </p>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <div class="phone">
+                <div class="textbox">
+                  <i class="fa fa-envelope"></i>
+                  <input type="email" placeholder="Email" id="email" formControlName="email">
+
+                </div>
+                <show-errors [control]="loginForm.controls.email"></show-errors>
+
+              </div>
+              <div class="phone">
+                <div class="textbox">
+                  <i class="fa fa-phone"></i>
+                  <input type="text" placeholder="Phone " id="phone" aria-required="true" appInputOnlyNumber=""
+                    maxlength="10" formControlName="phone_no">
+
+                </div>
+                <show-errors [control]="loginForm.controls.phone_no"></show-errors>
+
+              </div>
+
+              <div class="password">
+                <div class="textbox">
+                  <i class="fa fa-lock"></i>
+                  <input type="password" placeholder="Password " id="pwd" formControlName="password">
+
+                </div>
+                <show-errors [control]="loginForm.controls.password"></show-errors>
+
+              </div>
+
+              <div class="security">
+                <div class="textbox">
+                  <i class="fa fa-key"></i>
+                  <input type="text" placeholder="Security Code " id="code" aria-required="true"
+                    formControlName="security">
+
+                </div>
+                <show-errors [control]="loginForm.controls.phone_no"></show-errors>
+
+              </div>
+
+
+              <div class="div">
+                <b style="color: red; margin-left: 30%;">{{loginModel.error}}</b>
+
+              </div>
+
+              <input type="submit" class="btn" value="Sign in">
+
+            </form>
+
+
+          </form>
+
+        </section>
+
+        <div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

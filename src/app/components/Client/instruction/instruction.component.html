@@ -1,0 +1,72 @@
+<div class="div mb-5 navbg1">
+  <nav class="navbar navbar-inverse navrem">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="sidebar-brand"><img src="assets/logo/logo_50x50.png"> <span style="color: white;"> Think
+            Ahead</span></div>
+      </div>
+      <button type="button"  class="btn btn-danger" (click)="logout()">logout</button>
+    </div>
+    <div class="nav">
+      <ul class="nav navbar-nav">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" role="button" aria-haspopup="true">
+            <p class="arrow down"></p>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+</div>
+
+
+<div class="container-fluid container-fluid1" style="background-color: #FFFFFF;">
+  <!-- Content Wrapper. Contains page content -->
+  <div style="background-color: #FFFFFF;">
+    <!-- Content Header (Page header) -->
+    <div>
+      <!-- Main content -->
+      <section class="content">
+        <!-- uiView: --><div  class="ng-scope"><div class="container-fluid " >
+        <div class="col-md-12">
+          <h2 style="text-align: center; margin-top:5px">Quiz Instruction</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h4>
+              <li>
+                Check your internet connection before the test to ensure that it is not set to disconnect.
+              </li>
+             
+              <li>
+                Each question carry 1 mark, no negative marks.
+              </li>
+              <li>
+                Do not use the <b>" Back "</b> button on your browser during the Quiz.
+              </li>
+              <li>
+                Don't close the window of the test for any reason.
+              </li>
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" style="text-align: center;">
+            <button class="btn  btn-sm" style="  background: linear-gradient(to right, #c60808 10%, #ff3300 105%); color:white; font-weight: 600;" type="button" (click)="start()" >
+              Start Quiz
+            </button>
+          </div>
+        </div>
+        <br>
+      </div></div>
+      </section>
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+</div>
+
+

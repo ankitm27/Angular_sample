@@ -1,0 +1,362 @@
+
+<div id="wrapper">
+
+  <aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+      <h2>ACCA</h2>
+    </div>
+    <ul class="sidebar-nav">
+      <li class="sidebar">
+        <a >
+          <i class="fa fa-home"></i>
+          <span [routerLink]="['/admin/home']">Home</span>
+        </a>
+     
+      </li>
+      <li>
+        <a>
+          <i class="fa fa-dashboard"></i>
+          <span [routerLink]="['/admin/dashboard']">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a data-toggle="collapse" data-target="#submenu1" class="dropdown-toggle "> 
+          <i class="fa fa-book"></i>
+          <span  >Manage Quiz</span>
+        </a>
+        <ul id="submenu1" class="collapse"> 
+          <li>
+            <a class="dropdown-item" >
+              <i class="fa fa-book"></i>
+              <span [routerLink]="['/admin/addQuiz']" >Add Quiz</span>
+            </a>
+          </li>
+          <li>
+            <a  class="dropdown-item">
+              <i class="fa fa-book"></i>
+              <span  [routerLink]="['/admin/manageQuiz']">Add Question</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li>
+        <a >
+          <i class="fa fa-calendar"></i>
+          <span [routerLink]="['/client/dashboard']">Take Quiz</span>
+        </a>
+      </li>
+      <li>
+        <a >
+          <i class="fa fa-plug"></i>
+          <span [routerLink]="['/admin/manage-user']">Manage User</span>
+        </a>
+      </li>
+      <li>
+        <a >
+          <i class="fa fa-cog"></i>
+          <span [routerLink]="['/manageAccount']">Manage Account</span>
+        </a>
+      </li>
+      <li>
+        <a >
+          <i class="fa fa-podcast"></i>
+          <span [routerLink]="['/client/viewReport']">View Report</span>
+        </a>
+      </li>
+      <li>
+        <a >
+          <i class="fa fa-power-off"></i>
+          <span [routerLink]="['/home']">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <div id="navbar-wrapper">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section id="content-wrapper">
+    <div class="row container-fluid">
+      <section class="card__container ">
+        <header class="card__header border-bottom">
+        <h4>Portfolio Performance</h4>
+        </header>
+        <div class="card__value border-bottom" >
+          <div class="row">
+            <div class="col-md-4">
+              <div class="box">
+                <div class="center">Total Particpants</div>
+                  <div class="info mt-3">
+                    <i class="fa fa-user fa-fw bg-primary">   </i>
+
+                    <h3 class="head  ml-4">1,245</h3> 
+                    <!-- <p>Lorem ipsum dolor sit amet</p> -->
+                  </div>               
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <div class="center">Quiz Particpants</div>
+                <!-- <header class="center"><h5>Total Particpants</h5></header> -->
+                  <div class="info mt-3" >
+                    <i class="fa fa-user fa-fw bg-danger danger">   </i>
+
+                    <h3 class="head ml-4">1,245</h3> 
+                    <!-- <p>Lorem ipsum dolor sit amet</p> -->
+                  </div>               
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <div class="center">Industry Average</div>
+                  <div class="info mt-3">
+                    <i class="fa fa-user fa-fw bg-success success">   </i>
+
+                    <h3 class="head  ml-4">1,245</h3> 
+                    <!-- <p>Lorem ipsum dolor sit amet</p> -->
+                  </div>               
+              </div>
+            </div>
+          </div>
+     
+        </div>
+        <footer class="card__footer"></footer>
+        <div class="card__meta-data"></div>
+      </section>
+    </div>
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <main class="page-content ">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- <div class="col-md-10">
+                        <h2>Home</h2>
+        
+                    </div> -->
+                   
+                </div>
+              
+           <div class="row">
+               <div class="col-md-6">
+                   <h4>Month on Month Reach- Corporate</h4> 
+               </div>
+               <div class="col-md-6">
+                <h4>Month on Month Reach- Edu Institiutes</h4>
+            </div>
+           </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+                <div style="display: block;">
+                  <canvas baseChart 
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [plugins]="barChartPlugins"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType">
+                  </canvas>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <div style="display: block;">
+                  <canvas baseChart 
+                    [datasets]="barChartData2"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [plugins]="barChartPlugins"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType">
+                  </canvas>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-3">
+        
+              </div>
+              <div class="col-md-8">
+                  <h4>Month on month bar graph chart of last 12 months
+                </h4> <hr>
+              </div>
+          </div>
+        <!-- 
+          <div class="row">
+            <div class="col-md-10">
+                <h3>Month on Month Reach- Edu Institiutes</h3> <hr style="align-items: left">
+            </div>
+        </div>
+        <div class="row">
+         <div class="form-group col-md-8">
+             <div style="display: block;">
+               <canvas baseChart 
+                 [datasets]="barChartData"
+                 [labels]="barChartLabels"
+                 [options]="barChartOptions"
+                 [plugins]="barChartPlugins"
+                 [legend]="barChartLegend"
+                 [chartType]="barChartType">
+               </canvas>
+             </div>
+           </div>
+        </div> -->
+        <!-- <div class="row">
+           <div class="col-md-3">
+        
+           </div>
+           <div class="col-md-8">
+               <h4>Month on month bar graph chart of last 12 months
+             </h4> <hr>
+           </div>
+        </div> -->
+        
+        <div class="row mt-4">
+        <div class="col-md-9">
+        
+        </div>
+        <div class="col-md-3">
+            <button (click) = 'randomString()' class="btn btn-primary" data-toggle="modal" data-target="#myModal">Create New Engagement</button>
+        </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12 ml-sm-auto" style="overflow-x: auto;">
+              <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col"style="text-align: center;">Location</th>
+                      <th scope="col"style="text-align: center;">Date Of Visit</th>
+                      <th scope="col"style="text-align: center;">Quiz Audience</th>
+                      <th scope="col"style="text-align: center;">Security Code</th>
+                      <th scope="col"style="text-align: center;">Total Participation</th>        
+                      <th scope="col"style="text-align: center;">Participation</th>
+                      <th scope="col"style="text-align: center;">View</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" style="text-align: center;">Delhi</th>
+                      <td style="text-align: center;">22/04/2020</td>
+                      <td style="text-align: center;">Corporate </td>
+                      <td style="text-align: center;">@mdo</td>
+                      <td style="text-align: center;">222</td>
+                      <td style="text-align: center;">22%</td>              
+                      <td  style="text-align: center;"><a class="fa fa-eye" ></a></td>
+        
+                    </tr>
+                    <tr>
+                      <th scope="row" style="text-align: center;">2</th>
+                      <td style="text-align: center;">22/04/2020</td>
+                      <td style="text-align: center;">Corporate </td>
+                      <td style="text-align: center;">@mdo</td>
+                      <td style="text-align: center;">222</td>
+                      <td style="text-align: center;">22%</td>              
+                      <td  style="text-align: center;"><a class="fa fa-eye" ></a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="text-align: center;">3</th>
+                      <td style="text-align: center;">22/04/2020</td>
+                      <td style="text-align: center;">Corporate</td>
+                      <td style="text-align: center;">@mdo</td>
+                      <td style="text-align: center;">222</td>
+                      <td style="text-align: center;">22%</td>              
+                      <td  style="text-align: center;"><a class="fa fa-eye" ></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+            </div>
+        
+          </main>
+        </div>
+      </div>
+  </section>
+
+</div>
+
+    <form #regFrom="ngForm"  #regForm='ngForm' (ngSubmit)="save(regFrom)">
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+          
+
+        <div class="modal-header">
+          <h4 class="modal-title">Create Engagement</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="col-md-12">
+            <div class="form-label-group">
+              <label form="sign-email">Location Of Quiz</label>
+              <input type="text" id="location"  name="location" class="form-control"
+                placeholder="Location Of Quiz" required ngModel>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-label-group">
+              <label form="sign-email">Date Of Visit</label>
+              <input type="date" id="visitDate"  name="visitDate" class="form-control"
+                placeholder="Question Text" required ngModel>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-label-group">
+              <label form="sign-email">Security</label>
+              <input #security type="text" id="Sequrity"  name="Sequrity" class="form-control"
+                placeholder="Security Code" required ngModel disabled>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-label-group">
+              <label form="Audience"  for="Audience" required ngModel>Quiz Audience </label>
+
+              
+      <select id="inputState" class="form-control" required ngModel>
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+            </div>
+          </div>
+          
+          <div class="col-md-12">
+            <div class="form-label-group">
+              <label form="sign-email">Expected Total Participants
+              </label>
+              <input type="number" id="Total"  name="Total" class="form-control"
+                placeholder="Expected Total Participants" required ngModel>
+            </div>
+          </div>
+
+        
+       
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-md-1">
+                <button type="submit" class="btn btn-success" id=save [disabled]="!regFrom.valid" >Save</button>
+
+            </div>
+        </div>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  
+  </div>
+
+  </form>

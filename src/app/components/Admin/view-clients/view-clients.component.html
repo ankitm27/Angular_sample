@@ -1,0 +1,80 @@
+<div id="wrapper">
+  <app-side-bar></app-side-bar>
+
+  
+   
+  
+    <section id="content-wrapper">
+        <div class="row">
+            <main class="col-md-9 ">
+        
+              <div class="px-4">
+                  <h3 class="page-heading-wrap bg-white  pb-2 mb-1 border-bottom sticky-top "><b>Profile</b></h3>
+                  <!-- <barcode-scanner-livestream type="code_128" (valueChanges)="onValueChanges($event)"></barcode-scanner-livestream>
+                  <div [hidden]="!barcodeValue">
+                      {{barcodeValue}}
+                  </div> -->
+                 
+                <form >
+                  <div class="row mt-2">
+                    <div class="col-md-12 text-md-right" >
+                      <!-- <button class=" fa fa-pencil btn btn-outline-danger fstyle " id="edit-profile" (click)="isEdit = true;">
+                        Edit  
+                      </button> -->
+                    </div>
+                    <div class="col-md-3">
+                      <div class="upload-profile position-relative d-inline-block mb-4">
+                        <!-- <input type="file" class="form-control position-absolute" <img src="assets/images/cris.jpg"
+                          id="profileImage-logo" loadClass="rounded-circle" class="rounded-circle" width="150" height="150"> -->
+                        <!-- <i class="fa fa-camera"></i> -->
+                      </div>
+                      <!-- <div class="upload-profile position-relative d-inline-block mb-4">
+                        <img src="assets/images/cris.jpg" id="profileImage-logo1" loadClass="rounded-circle"
+                          class="rounded-circle" width="150" height="150">
+                      </div> -->
+                    </div>
+        
+                    <div class="col-md-9" >
+                      <div class="form-group row">
+                        <label class="col-md-3 text-md-right col-form-label"><strong class="fstyle">First Name</strong></label>
+                        <div class="col-md-9 form-group">
+                          <input type="text" name="first-name" class="form-control input-border fstyle " disabled id="first-name"
+                          [(ngModel)]="userModel.firstName" [ngModelOptions]="{standalone: true}" >
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 text-md-right col-form-label"><strong class="fstyle">Last Name</strong></label>
+                        <div class="col-md-9 form-group">
+                          <input type="text" name="last-name" class="form-control input-border fstyle " disabled
+                          id="last-name" [(ngModel)]="userModel.lastName" [ngModelOptions]="{standalone: true}" >
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 text-md-right col-form-label"><strong class="fstyle">Phone Number</strong></label>
+                        <div class="col-md-9 form-group">
+                          <input type="text" name="phoneNo" class="form-control input-border fstyle " disabled
+                         id="phoneNo" [(ngModel)]="userModel.phoneNumber" [ngModelOptions]="{standalone: true}">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 text-md-right col-form-label"><strong class="fstyle">Email ID</strong></label>
+                        <div class="col-md-9 form-group">
+                          <input type="text" name="email" class="form-control input-border fstyle " disabled
+                          id="email" [(ngModel)]="userModel.email" [ngModelOptions]="{standalone: true}">
+                        </div>
+                      </div>
+                  
+                   
+                    </div >
+                  
+                  </div>
+                </form>
+              </div>
+            </main>
+          </div>
+    </section>
+  
+  </div>
+  
+  
+  

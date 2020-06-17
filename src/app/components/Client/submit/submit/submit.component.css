@@ -1,0 +1,52 @@
+.navrem {
+  padding: 1.0rem 1rem;
+  font-weight: 700;
+  font-size: 30px;
+}  
+.navbg{
+  background-color: black;
+  }
+  #wrapper {
+    padding-left: 0;
+    transition: all 0.5s ease;
+    position: relative;
+  }
+  .bg-white1{
+background-color: aqua;
+  }
+  .card-header{
+    background-color: #c60808;
+    font-weight: 600;
+    color: white;
+    font-size: 20px;
+  }
+  .textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    
+    border-bottom: 1px solid black;
+  }
+  .textbox i{
+    width: 26px;
+    float: left;
+    text-align: center;
+  }
+  .textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    /* color: white; */
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 25px;
+  }
+
+  .btn1{
+width: 40%;
+background-color: red;
+color: white;
+  }

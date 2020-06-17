@@ -1,0 +1,76 @@
+
+  .container-fluid[_ngcontent-gpe-c1] {
+    padding-right: 15px;
+
+    margin-top: 20px;
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+    width: 96%;
+  }
+  element.style {
+    background-color: #FFFFFF;
+  }
+
+  .container-fluid[_ngcontent-tte-c3] {
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 96%;
+  }
+  
+  .ng-scope[_ngcontent-tte-c3] {
+    margin-top: 7px;
+    font-size: 18px;
+    margin-left: 14px;
+    margin-right: 0px;
+    position: relative;
+    left: 7px;
+    right: 7px;
+    top: 7px;
+    bottom: 7px;
+  }
+  
+  h4, .h4 {
+    font-size: 19px;
+  }
+  .ng-scope {
+    margin-top: 7px;
+    font-size: 18px;
+    margin-left: 14px;
+    margin-right: 0px;
+  }
+  .container-fluid1 {
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    margin-top: 20px;
+    /* margin-right: 25px; */
+    /* margin-left: 5px; */
+    width: 96%;
+    border:2px solid #000000 ;
+    border-radius: 14px;
+  }
+
+
+
+  .navrem {
+  padding: 1.0rem 1rem;
+  font-weight: 700;
+  font-size: 30px;
+}  
+.navbg1{
+  background-color: black;
+  }
+  #wrapper {
+    padding-left: 0;
+    transition: all 0.5s ease;
+    position: relative;
+  }
+  .bg-white1{
+background-color: aqua;
+  }
+  .card-header{
+    background-color: #c60808;
+    font-weight: 600;
+    color: white;
+    font-size: 20px;
+  }

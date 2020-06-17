@@ -1,0 +1,73 @@
+
+  .styles{
+    top: 8px;
+    position: absolute;
+    left: 20%;
+  }
+  @media (min-width: 992px) {
+
+
+    #content-wrapper {
+      position: relative;
+      /* top: 55px; */
+    }
+  }
+  .hide{
+    display: none;
+  }
+  .head {
+    font-weight: bold;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    /* margin-left: 111px; */
+    line-height: 1;
+    /* margin: 1rem auto; */
+}
+.head2 {
+  font-weight: bold;
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  /* margin-left: 125px; */
+  line-height: 1;
+  /* margin: 1rem auto; */
+}
+.head3 {
+  font-weight: bold;
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  /* margin-left: 53px; */
+  line-height: 1;
+  /* margin: 1rem auto; */
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: red;
+}
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+a {
+  color: red;
+  text-decoration: none;
+  background-color: transparent;
+}
+.card__container {
+ 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px auto;
+  align-items: stretch;
+  font-family: "source code pro";
+  color: darken(#cccccc, 60%);
+  background-color: #fff !important;
+  border-radius: 1%;
+  border-style: solid;
+    border-width: thin;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+
+}

@@ -1,0 +1,46 @@
+.btn-design{
+  background-color: red;
+  color: #fff;
+  /* border-color: #fff; */
+  width: 200px;
+  height: 44px;
+  }
+  .btn-design2{
+    background-color: grey;
+    color: #fff;
+    border-color: #fff;
+
+    }
+    @media (min-width: 992px) {
+
+
+      #content-wrapper {
+        position: relative;
+        /* top: 55px; */
+      }
+    }
+
+
+    input.ng-invalid.ng-touched
+  {
+    border-color: red;
+  }
+  .heading{
+    font-size: 20px;
+  }
+  .card__container {
+ 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px auto;
+    align-items: stretch;
+    font-family: "source code pro";
+    color: darken(#cccccc, 60%);
+    background-color: #fff !important;
+    border-radius: 1%;
+    border-style: solid;
+      border-width: thin;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  
+  }

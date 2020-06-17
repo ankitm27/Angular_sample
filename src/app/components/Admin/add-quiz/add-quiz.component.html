@@ -1,0 +1,190 @@
+<div id="wrapper">
+
+  <app-side-bar></app-side-bar>
+
+  <section id="content-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <main class="page-content ">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-9">
+                <h2>Create Quiz</h2>
+
+              </div>
+
+              <div class="col-md-3 ">
+                <button class="btn btn-design" data-toggle="modal" data-target="#addQuizModal">Add Quiz</button>
+              </div>
+            </div>
+            <div class="col-xs-12 board "></div>
+
+            <div class="row mt-5">
+              <div class="col-md-12 ml-sm-auto" style="overflow-x: auto;">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="text-align: center;">Number</th>
+                      <th scope="col" style="text-align: center;">Quiz Type</th>
+                      <th scope="col" style="text-align: center;">Quiz Name</th>
+                      <th scope="col" style="text-align: center;">Total Question</th>
+                      <!-- <th scope="col"style="text-align: center;">Start Date</th>
+                              <th scope="col"style="text-align: center;">End Date</th> -->
+                      <th scope="col" style="text-align: center;">Add Question</th>
+                      <th scope="col" style="text-align: center;">View Questions</th>
+                      <th scope="col" style="text-align: center;">Edit</th>
+                      <th scope="col" style="text-align: center;">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let u of filteredQuizList  | slice: (page-1) * pageSize:(page-1) * pageSize + pageSize; let i = index">
+                      <th scope="row" style="text-align: center;">{{i+1}}</th>
+                      <td style="text-align: center;">{{u.quiztype}}</td>
+                      <td style="text-align: center;">{{u.quiz_name}}</td>
+                      <td style="text-align: center;">{{u.numberOfQuestions}}</td>
+                      <!-- <td style="text-align: center;">22/2/2020</td>
+                              <td style="text-align: center;">23/2/2020</td> -->
+                      <td style="text-align: center;" (click)="addQuestion(u.id,u.numberOfQuestions,u.question_count)"><a class="fa fa-plus"></a></td>
+                      <td style="text-align: center;" (click)="viewQuestion(u.id)"><a class="fa fa-question"></a></td>
+
+                      <td style="text-align: center;"><a class="fa fa-pencil" data-toggle="modal"
+                          data-target="#editQuizModal" (click)="quizid(u.id,u.question_count)"></a></td>
+                      <td style="text-align: center;" (click)="deleteQuiz(u.id)"><a class="fa fa-trash"></a></td>
+
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- <div class="col-md-12" *ngIf="filteredQuizList == 0">
+              No records found
+            </div> -->
+            <div class="row d-flex justify-content-center mr-5 mt-2" *ngIf="filteredQuizListLength >= 7">
+              <ngb-pagination [collectionSize]="filteredQuizList.length" [(page)]="page" [maxSize]="7"
+                              [rotate]="true"
+                              [pageSize]="pageSize" class="d-flex justify-content-center"
+                              [boundaryLinks]="true">
+              </ngb-pagination>
+            </div>
+        
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+
+<div class="modal" id="addQuizModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Add Quiz</h4>
+        <button type="button" #closebutton class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <form [formGroup]="addQuizForm" (ngSubmit)="save()">
+        <div class="modal-body">
+
+          <div class="col-md-12">
+
+            <div class="form-label-group">
+              <label form="sign-email">Quiz Type</label>
+              <select id="inputState" class="form-control" required ngModel formControlName="quizType">
+                <option>Select option</option>
+                <ng-container *ngFor="let u of list_engagement">
+                  <option value={{u.type_}}>{{u.type_}}</option>
+                </ng-container>
+              </select>
+              <show-errors [control]="addQuizForm.controls.quizType"></show-errors>
+
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-label-group">
+              <label form="sign-email">Quiz Name</label>
+              <input type="text" id="qe" name="qe" class="form-control" placeholder="QuizName" required ngModel
+                formControlName="quiz_name" >
+              <show-errors [control]="addQuizForm.controls.quiz_name"></show-errors>
+
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-label-group">
+              <label form="sign-email">No of Questions</label>
+              <input type="text" id="qe" name="qe" class="form-control" placeholder="No of Questions" required ngModel
+                formControlName="numberOfQuestions" appInputOnlyNumber="" >
+              <show-errors [control]="addQuizForm.controls.numberOfQuestions"></show-errors>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-md-1">
+              <button type="submit" class="btn btn-design2" id="save">Save</button>
+
+            </div>
+          </div>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="editQuizModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Quiz</h4>
+        <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open</button> -->
+        <button type="button" #closebutton class="close" data-dismiss="modal">&times;</button>      </div>
+
+      <!-- Modal body -->
+      <form [formGroup]="editQuizForm" (ngSubmit)="editQuiz()">
+        <div class="modal-body">
+
+
+          <div class="col-md-12">
+            <div class="form-label-group">
+              <label form="sign-email">No of Questions</label>
+              <input type="text" id="qe" name="qe" class="form-control" placeholder="No of Questions" required ngModel
+                formControlName="numberOfQuestions" appInputOnlyNumber="" >
+              <show-errors [control]="editQuizForm.controls.noOfQuestion"></show-errors>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-md-1">
+              <button type="submit" class="btn btn-design2" id="save" data-dismiss="modal" (click)="editQuiz()">Save</button>
+
+            </div>
+          </div>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>

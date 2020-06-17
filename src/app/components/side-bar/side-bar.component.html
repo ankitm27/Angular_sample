@@ -1,0 +1,61 @@
+<aside id="sidebar-wrapper">
+  <div class="sidebar-brand"><img src="assets/logo/logo_50x50.png"> <span> Think Ahead</span></div>
+  <ul class="sidebar-nav">
+    <li [routerLink]="['/admin/dashboard']" class="sidebar" [ngClass]="{'active': checkClass('/admin/dashboard')}">
+      <a>
+        <i class="fa fa-home"></i>
+        <span >Home</span>
+      </a>
+    </li>
+
+    <li [routerLink]="['/admin/addQuiz']" [ngClass]="{'active': checkClass('/admin/addQuiz')}">
+      <a>
+        <i class="fa fa-book"></i>
+        <span >Manage Quiz</span>
+      </a>
+    </li>
+
+    <li [routerLink]="['/admin/manage-user']"  [ngClass]="{'active': checkClass('/admin/manage-user')}" >
+      <a>
+        <i class="fa fa-plug"></i>
+        <span >Users</span>
+      </a>
+    </li>
+
+    <li [routerLink]="['/admin/manageAccount']" [ngClass]="{'active': checkClass('/admin/manageAccount')}" >
+      <a>
+        <i class="fa fa-cog"></i>
+        <span > Change Password</span>
+      </a>
+    </li>
+  </ul>
+  <ul class="bottom-icons">
+    <li (click)="logout()">
+      <a>
+        <i class="fa fa-power-off"></i>
+        <span style="color: white;">Logout</span>
+      </a>
+    </li>
+  </ul>
+</aside>
+<div id="navbar-wrapper">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+      </div>
+    </div>
+    <div class="nav">
+      <ul class="nav navbar-nav">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="javascript:void(0)" data-toggle="dropdown" role="button" aria-haspopup="true">
+            <p class="arrow down"></p>
+          </a>
+
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</div>

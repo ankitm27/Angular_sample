@@ -1,0 +1,317 @@
+#form-signin .form-signin-wrap {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin-top: 70px;
+}
+#form-signin .form-signin-wrap {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    /* margin: auto; */
+}
+@media (min-width: 992px) {
+    #form-signin .form-signin-wrap {
+        width: 100%;
+        max-width: 530px;
+        padding: 15px;
+        margin: auto;
+    }
+
+    #form-signin .welcom-user-wrap {
+        width: 100%;
+        max-width: 850px;
+        padding: 15px;
+        margin: auto;
+    }
+    #form-content .welcom-user-wrap {
+        width: 100%;
+        max-width: 850px;
+        padding: 15px;
+        margin: auto;
+    }
+}
+.btn-fb {
+    background: #3b5998;
+    color: #fff;
+}
+.styles{
+    position: absolute;
+}
+.tags{
+    color: orange;
+    font-family: "Times New Roman", Times, serif;
+}
+.btn-dang {
+    color: #fff;
+    background-color: brown;
+    border-color: brown;
+}
+.tag{
+    color: purple;
+    font-family: "Times New Roman", Times, serif;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+.button{
+    position: absolute;
+    left: 87%;
+    top: 18%;
+}
+.bg-img {
+  /* The image used */
+  background-image: url('/assets/images/background.jpg');
+   /* <img src="/assets/images/target.png"  */
+
+  min-height: 125px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+    position: absolute;
+    margin: 20px;
+    left: 51%;
+    width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  /* background-color: #333; */
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.center{
+    text-align:  center;
+    position: absolute;
+    left: 45%;
+}
+.bs-example{
+    margin: 20px;
+  }
+  .bg-image {
+    /* The image used */
+    background-image: url('/assets/images/back3.jpg');
+  
+    min-height: 500px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Needed to position the navbar */
+    position: relative;
+  }
+  .nav-style{
+    font-weight: 600;
+    font-size: large;
+    padding-right: 2.5rem;
+    padding-left: 0.5rem;
+    color: white;
+  }
+  .dropdown-menu {
+    position: absolute;
+    right: 0 !important;
+    left: auto;
+  }
+  .dropdown-menu.notify-drop {
+    min-width: 330px;
+    background-color: #fff;
+    max-height: 370px;
+  }
+  .dropdown-menu.notify-drop .notify-drop-title {
+    border-bottom: 1px solid #e2e2e2;
+    padding: 5px 15px 10px 15px;
+  }
+  
+  i {
+    /* border: solid black; */
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    position: absolute;
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .bg-volor{
+    background-color: darkgray;
+  }
+  
+  .btn-design{
+    background-color: grey;
+    color: #fff;
+
+    border-color: #fff;
+  }
+  
+  
+  .button{
+    position: absolute;
+    left: 87%;
+    top: 5%;
+  }
+  .btnn{
+    background-color: white;
+    height: 34px;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .anchor1{
+    height: 343px;
+    margin-top: -20px;
+  
+  }
+  .bg-text {
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    font-weight: bold;
+    /* border: 3px solid #f1f1f1; */
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  .h1Tag{
+      color: yellow;
+  }
+  .Design{
+      background-color: yellowgreen;
+  }
+  .playNow{
+      font-size: 28px;
+      font-weight: 600;
+      color: yellow;
+      
+  }
+  .winner{
+      height: 300px;
+  }
+  .content{
+      color: gray;
+  }
+  .color{
+      color: yellow;
+  }
+  .buttons{
+      position: absolute;
+  }
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to right, #c60808 10%, #ff3300 105%);
+    left: 0;
+    z-index: 1030;
+  }
+  .hide{
+      display: none;
+  }
+
+  input.ng-invalid.ng-touched
+  {
+    border-color: red;
+  }
+  .bg{
+    background: linear-gradient(to right, #c60808 10%, #ff3300 105%);
+    min-height: 100vh;
+  }
+  .image{
+  
+        width: 100%;
+        height: auto;
+    
+  }
+  .mt-5, .my-5 {
+    margin-top: 9rem !important;
+}
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid black;
+  }
+  .textbox i{
+    width: 26px;
+    float: left;
+    text-align: center;
+  }
+  .textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    /* color: white; */
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 50px;
+  }
+  .btn{
+    width: 40%;
+    background: red;
+    
+     color: white;
+    padding: 5px;
+    /* color: white; */
+    font-size: 18px;
+    cursor: pointer;
+    margin:10px 0 0 141px;
+  }
+  .btn2{
+    width: 50%;
+    background: red;
+    
+     color: white;
+    padding: 5px;
+    /* color: white; */
+    font-size: 18px;
+    cursor: pointer;
+    margin:10px 0 0 141px;
+  }
+/* Small Devices, Tablets */
+
+.shadow-lg {
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 1.175) !important;
+}
+
+.battel-font{
+    font-size: 59px;
+    font-family: Arial,'Open Sans',sans-serif;
+    font-weight: 600;
+    color: white;
+  }
+  
